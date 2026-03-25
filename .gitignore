@@ -23,6 +23,11 @@ sessdata.txt
 # Downloads (keep subtitles by default)
 downloads/
 
+# Subtitle files (often downloaded/generated artifacts)
+*.vtt
+*.srt
+*.ass
+
 # Common large media outputs
 *.mp4
 *.mkv
@@ -34,6 +39,12 @@ downloads/
 *.mp3
 *.wav
 *.aac
+
+# Archives and docs
+*.zip
+*.rar
+*.7z
+*.docx
 
 # Logs
 *.log
