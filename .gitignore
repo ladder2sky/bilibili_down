@@ -1,0 +1,39 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+
+.vscode/
+.idea/
+
+.DS_Store
+Thumbs.db
+
+# Binaries and tools
+yt-dlp.exe
+ffmpeg.exe
+ffprobe.exe
+
+# Secrets
+sessdata.txt
+
+# Downloads (keep subtitles by default)
+downloads/
+
+# Common large media outputs
+*.mp4
+*.mkv
+*.webm
+*.flv
+*.ts
+*.m4s
+*.m4a
+*.mp3
+*.wav
+*.aac
+
+# Logs
+*.log
