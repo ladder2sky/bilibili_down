@@ -19,6 +19,9 @@ ffprobe.exe
 
 # Secrets
 sessdata.txt
+cookies.txt
+*.cookies.txt
+*_cookies.txt
 
 # Downloads (keep subtitles by default)
 downloads/
