@@ -125,6 +125,31 @@
 
 ---
 
+## 音频提取（extract_audio.py）
+- 功能
+  - 从 `mp4` 中提取音频为 WAV：44.1kHz / 16bit / 双声道（pcm_s16le）。
+  - 支持通过参数控制提取的起止时间。
+- 使用
+  - 直接用文件名（会在 `downloads/` 下查找）：
+    ```powershell
+    uv run python .\extract_audio.py "your_video.mp4"
+    ```
+  - 指定起止时间（支持 `秒` 或 `HH:MM:SS.xxx`）：
+    ```powershell
+    uv run python .\extract_audio.py "your_video.mp4" --start 00:01:10.500 --end 00:03:20.000
+    ```
+  - 指定输出文件：
+    ```powershell
+    uv run python .\extract_audio.py "your_video.mp4" --start 70.5 --end 200 --out "downloads\\clip.wav"
+    ```
+- 说明
+  - 依赖 `ffmpeg`。若提示找不到 ffmpeg，可运行：
+    ```powershell
+    uv run python .\scripts\ensure_ffmpeg.py
+    ```
+
+---
+
 ## 参数与行为汇总
 - youtube_down.py
   - 参数：第 1 个命令行参数为视频链接；支持 `--list-formats`、`-f`、`--download-sections`、`--no-part`、`--proxy` 等。
@@ -138,6 +163,9 @@
 - gen_subtitle.py
   - 参数：第 1 个命令行参数为本地视频文件路径。
   - 行为：生成 `.en.srt` 与 `.zh.srt`，与源文件同目录保存。
+- extract_audio.py
+  - 参数：`input`（mp4 文件名或路径）；可选 `--start/--end/--out`。
+  - 行为：输出 WAV（44.1kHz/16bit/双声道）。
 
 ---
 
